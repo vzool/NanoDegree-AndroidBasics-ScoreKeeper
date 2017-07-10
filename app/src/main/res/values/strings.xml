@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">Score Keeper</string>
+    <string name="ps_4">PS 4</string>
+    <string name="score">Score</string>
+    <string name="_00">00</string>
+    <string name="point">+Point</string>
+    <string name="xbox">xBox</string>
+    <string name="reset">Reset</string>
+    <string name="minus_point">-Point</string>
+</resources>

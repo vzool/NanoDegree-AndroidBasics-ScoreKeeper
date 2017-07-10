@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    tools:context="me.vzool.scorekeeper.MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:baselineAligned="true">
+
+        <!-- PS4 -->
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@color/PS4_ContainerColor">
+
+            <TextView
+                android:id="@+id/ps4_label"
+                style="@style/AppPS4TextViewStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:text="@string/ps_4" />
+
+            <TextView
+                android:id="@+id/textView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/score"
+                android:textAlignment="center"
+                android:layout_above="@+id/ps4_score"
+                android:layout_alignParentStart="true" />
+
+            <TextView
+                android:id="@+id/ps4_score"
+                style="@style/AppScoreValueTextViewStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/_00"
+                android:layout_centerVertical="true"
+                android:layout_alignParentStart="true" />
+
+            <Button
+                android:id="@+id/ps4_point_btn"
+                style="@style/AppPS4ButtonStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_above="@+id/ps4_negative_point_btn"
+                android:layout_alignParentStart="true"
+                android:onClick="PS4_AddPoint"
+                android:text="@string/point" />
+
+            <Button
+                android:id="@+id/ps4_negative_point_btn"
+                style="@style/AppPS4ButtonStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentStart="true"
+                android:onClick="PS4_MinusPoint"
+                android:text="@string/minus_point" />
+
+        </RelativeLayout>
+
+        <!-- xBox -->
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
+
+            <TextView
+                android:id="@+id/textView4"
+                style="@style/AppXBOXTextViewStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:text="@string/xbox" />
+
+            <TextView
+                android:id="@+id/textView3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_above="@+id/xbox_score"
+                android:layout_alignParentStart="true"
+                android:text="@string/score"
+                android:textAlignment="center" />
+
+            <TextView
+                android:id="@+id/xbox_score"
+                style="@style/AppScoreValueTextViewStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_centerVertical="true"
+                android:text="@string/_00" />
+
+            <Button
+                android:id="@+id/xbox_point_btn"
+                style="@style/AppXBOXButtonStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_above="@+id/xbox_minus_point_btn"
+                android:layout_alignParentStart="true"
+                android:onClick="xBox_AddPoint"
+                android:text="@string/point" />
+
+            <Button
+                android:id="@+id/xbox_minus_point_btn"
+                style="@style/AppXBOXButtonStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentStart="true"
+                android:onClick="xBox_MinusPoint"
+                android:text="@string/minus_point" />
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+</ScrollView>
